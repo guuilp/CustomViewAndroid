@@ -20,7 +20,11 @@ public class ExpandableTextView extends android.support.v7.widget.AppCompatTextV
 
     private String originalText;
     private int trimLength;
+
     private boolean firstCall = true;
+    private boolean mBroadcasting = false;
+
+    private OnTextViewExpandedListener mOnTextViewExpandedListener;
 
     public ExpandableTextView(Context context) {
         super(context);
@@ -44,6 +48,19 @@ public class ExpandableTextView extends android.support.v7.widget.AppCompatTextV
             @Override
             public void onClick(View v) {
                 setText(originalText);
+
+                if (mBroadcasting) {
+                    return;
+                }
+
+                mBroadcasting = true;
+
+                if (mOnTextViewExpandedListener != null) {
+                    mOnTextViewExpandedListener.onTextViewExpanded();
+                }
+
+                mBroadcasting = false;
+
             }
         });
     }
@@ -90,6 +107,14 @@ public class ExpandableTextView extends android.support.v7.widget.AppCompatTextV
                 a.recycle();
             }
         }
+    }
+
+    public interface OnTextViewExpandedListener {
+        void onTextViewExpanded();
+    }
+
+    public void setOnTextViewExpandedListener(OnTextViewExpandedListener listener){
+        mOnTextViewExpandedListener = listener;
     }
 
 }

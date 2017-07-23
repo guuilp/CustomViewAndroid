@@ -40,8 +40,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
 
-        app:title="What I'll provide"
-        app:content="Wetsuit, surfboard\nsend your height before arriving\n\nGranola Bars"
+        app:title="@string/what_i_will_provide"
+        app:content="@string/medium_text"
 
         android:animateLayoutChanges="true"
         app:layout_constraintLeft_toLeftOf="@+id/session2"

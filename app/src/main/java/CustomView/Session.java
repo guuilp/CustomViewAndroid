@@ -19,10 +19,14 @@ import guuilp.github.com.customviewandroid.R;
 public class Session extends LinearLayout {
 
     private TextView title;
-    private TextView content;
+    private ExpandableTextView content;
 
     private String titleText;
     private String contentText;
+
+    private OnSessionExpandedListener mOnSessionExpandedListener;
+
+    private boolean mBroadcasting = false;
 
     public Session(Context context) {
         super(context);
@@ -42,15 +46,37 @@ public class Session extends LinearLayout {
     private void setupView(Context context, AttributeSet attrs){
         setupCustomAtributes(context, attrs);
 
+        setupLayout(context);
+
+        content.setOnTextViewExpandedListener(new ExpandableTextView.OnTextViewExpandedListener() {
+            @Override
+            public void onTextViewExpanded() {
+                if (mBroadcasting) {
+                    return;
+                }
+
+                mBroadcasting = true;
+
+                if (mOnSessionExpandedListener != null) {
+                    mOnSessionExpandedListener.onSessionExpanded();
+                }
+
+                mBroadcasting = false;
+            }
+        });
+
+        setTitle(titleText);
+
+        setContent(contentText);
+    }
+
+    private void setupLayout(Context context) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         View view = inflater.inflate(R.layout.layout_session, this);
 
         title = (TextView) view.findViewById(R.id.title);
-        content = (TextView) view.findViewById(R.id.content);
-
-        setTitle(titleText);
-        setContent(contentText);
+        content = (ExpandableTextView) view.findViewById(R.id.content);
     }
 
     public void setTitle(String newTitleText){
@@ -80,5 +106,13 @@ public class Session extends LinearLayout {
                 a.recycle();
             }
         }
+    }
+
+    public interface OnSessionExpandedListener {
+        void onSessionExpanded();
+    }
+
+    public void setOnSessionExpanded(OnSessionExpandedListener listener){
+        mOnSessionExpandedListener = listener;
     }
 }
