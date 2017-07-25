@@ -43,9 +43,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
 
-            app:title="@string/what_i_will_provide"
-            app:content="@string/medium_text"
-
             android:animateLayoutChanges="true"
             app:layout_constraintLeft_toLeftOf="@+id/session2"
             app:layout_constraintTop_toBottomOf="@+id/session2"/>

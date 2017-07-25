@@ -65,9 +65,9 @@ public class Session extends LinearLayout {
             }
         });
 
-        setTitle(titleText);
+        if(titleText != null && !titleText.isEmpty()) setTitle(titleText);
 
-        setContent(contentText);
+        if(contentText != null && !contentText.isEmpty()) setContent(contentText);
     }
 
     private void setupLayout(Context context) {
