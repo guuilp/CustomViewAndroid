@@ -15,7 +15,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         android:textColor="@color/colorBlack70"/>
 
-    <CustomView.ExpandableTextView
+    <guuilp.github.com.customviewandroid.customView.ExpandableTextView
         android:id="@+id/content"
         tools:text="@string/big_text"
         android:layout_width="wrap_content"

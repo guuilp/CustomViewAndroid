@@ -12,7 +12,7 @@
         android:padding="16dp"
         android:animateLayoutChanges="true">
 
-        <CustomView.Session
+        <guuilp.github.com.customviewandroid.customView.Session
             android:id="@+id/session"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
-        <CustomView.Session
+        <guuilp.github.com.customviewandroid.customView.Session
             android:id="@+id/session2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
             app:layout_constraintLeft_toLeftOf="@+id/session"
             app:layout_constraintTop_toBottomOf="@+id/session"/>
 
-        <CustomView.Session
+        <guuilp.github.com.customviewandroid.customView.Session
             android:id="@+id/session3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

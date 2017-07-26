@@ -1,4 +1,4 @@
-package CustomView;
+package guuilp.github.com.customviewandroid.customView;
 
 import android.content.Context;
 import android.content.res.TypedArray;
