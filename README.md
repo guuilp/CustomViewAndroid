@@ -6,7 +6,7 @@ In this example the main goal is to show how to create a Custom View with:
 
 The example is based on the "Session" of Airbnb App.   
 
-The "session" is based on a: 
+The "session" is composed of: 
 1. Title;
 2. Content (with read more action);
 3. Divisor line.
