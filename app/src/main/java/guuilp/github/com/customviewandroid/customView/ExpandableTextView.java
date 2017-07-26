@@ -77,10 +77,10 @@ public class ExpandableTextView extends android.support.v7.widget.AppCompatTextV
                 reducedText.append(text.toString().substring(0, Math.min(text.length(), trimLength)).trim());
                 reducedText.append("... ");
 
-                String blue = getContext().getString(R.string.read_more);
-                SpannableString blueSpannable = new SpannableString(blue);
-                blueSpannable.setSpan(new ForegroundColorSpan(ContextCompat.getColor(getContext(), R.color.colorPrimary)), 0, blue.length(), 0);
-                reducedText.append(blueSpannable);
+                String pink = getContext().getString(R.string.read_more);
+                SpannableString pinkSpannable = new SpannableString(pink);
+                pinkSpannable.setSpan(new ForegroundColorSpan(ContextCompat.getColor(getContext(), R.color.colorAccent)), 0, pink.length(), 0);
+                reducedText.append(pinkSpannable);
 
                 firstCall = false;
 
