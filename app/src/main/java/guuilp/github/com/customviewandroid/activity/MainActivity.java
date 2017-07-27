@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         session1.setOnSessionExpanded(new Session.OnSessionExpandedListener() {
             @Override
             public void onSessionExpanded() {
-                Toast.makeText(MainActivity.this, "Session 1 foi clicada!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Session 1 was clicked!", Toast.LENGTH_SHORT).show();
             }
         });
     }
