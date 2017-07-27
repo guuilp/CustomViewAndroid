@@ -13,6 +13,6 @@ The "session" is composed of:
 
 Airbnb on the left and this project result on the right:
 
-[![Airbnb](https://media.giphy.com/media/HmPwTBYf7iFR6/giphy.gif "Airbnb")](https://media.giphy.com/media/HmPwTBYf7iFR6/giphy.gif "Airbnb")   [![Custom View Android](https://media.giphy.com/media/mzrDHswn0pytq/giphy.gif "Custom View Android")](https://media.giphy.com/media/mzrDHswn0pytq/giphy.gif "Custom View Android")
+[![Airbnb](https://media.giphy.com/media/HmPwTBYf7iFR6/giphy.gif "Airbnb")](https://media.giphy.com/media/HmPwTBYf7iFR6/giphy.gif "Airbnb")   [![Custom View Android](https://media.giphy.com/media/13G1LJEw6FQk24/giphy.gif "Custom View Android")](https://media.giphy.com/media/13G1LJEw6FQk24/giphy.gif "Custom View Android")
 
 
